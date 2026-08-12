@@ -5,20 +5,14 @@
 }
 
 
-html,
-body {
-    min-height: 100%;
-}
-
-
 body {
 
     font-family:
-        Inter,
         Arial,
+        Helvetica,
         sans-serif;
 
-    color: #171717;
+    color: #1c1d1f;
 
     background: #ffffff;
 
@@ -30,15 +24,9 @@ a {
 }
 
 
-button,
-input {
-    font-family: inherit;
-}
-
-
-/* =========================================
+/* =====================================
    MAIN
-========================================= */
+===================================== */
 
 .register-page {
 
@@ -46,17 +34,16 @@ input {
 
     display: grid;
 
-    grid-template-columns:
-        48% 52%;
+    grid-template-columns: 55% 45%;
 
 }
 
 
-/* =========================================
-   LEFT
-========================================= */
+/* =====================================
+   LEFT IMAGE
+===================================== */
 
-.left-section {
+.image-section {
 
     position: relative;
 
@@ -64,17 +51,17 @@ input {
 
     overflow: hidden;
 
-    background:
-        #eee8ff;
-
 }
 
 
-.background-image {
+.hero-image {
 
     position: absolute;
 
+    inset: 0;
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -82,7 +69,7 @@ input {
 }
 
 
-.overlay {
+.image-overlay {
 
     position: absolute;
 
@@ -90,16 +77,16 @@ input {
 
     background:
         linear-gradient(
-            180deg,
-            rgba(244,238,255,0.94),
-            rgba(230,218,255,0.40),
-            rgba(48,26,82,0.65)
+            90deg,
+            rgba(25, 15, 50, 0.90),
+            rgba(64, 35, 100, 0.62),
+            rgba(70, 40, 110, 0.35)
         );
 
 }
 
 
-.left-content {
+.image-content {
 
     position: relative;
 
@@ -107,161 +94,22 @@ input {
 
     min-height: 100vh;
 
-    padding: 42px 50px;
+    padding: 45px 60px;
 
     display: flex;
 
     flex-direction: column;
 
-}
-
-
-/* =========================================
-   LOGO
-========================================= */
-
-.logo,
-.mobile-logo {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    width: fit-content;
-
-    color: #171717;
-
-    font-size: 21px;
-
-    font-weight: 800;
+    justify-content: space-between;
 
 }
 
 
-.logo-icon {
+/* =====================================
+   BRAND
+===================================== */
 
-    width: 42px;
-    height: 42px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    background: white;
-
-    border-radius: 11px;
-
-    box-shadow:
-        0 8px 25px
-        rgba(0,0,0,0.08);
-
-}
-
-
-.logo span span,
-.mobile-logo span span {
-
-    color: #6d28d9;
-
-}
-
-
-/* =========================================
-   LEFT MIDDLE
-========================================= */
-
-.left-middle {
-
-    margin-top: auto;
-
-    margin-bottom: auto;
-
-    max-width: 520px;
-
-}
-
-
-.tag {
-
-    display: inline-block;
-
-    padding: 7px 10px;
-
-    margin-bottom: 17px;
-
-    color: #6d28d9;
-
-    background:
-        rgba(255,255,255,0.75);
-
-    border-radius: 5px;
-
-    font-size: 8px;
-
-    font-weight: 800;
-
-    letter-spacing: 1.5px;
-
-}
-
-
-.left-middle h1 {
-
-    margin-bottom: 18px;
-
-    color: #181329;
-
-    font-size:
-        clamp(42px, 4vw, 58px);
-
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-
-}
-
-
-.left-middle h1 span {
-
-    color: #6d28d9;
-
-}
-
-
-.description {
-
-    max-width: 460px;
-
-    margin-bottom: 27px;
-
-    color: #514961;
-
-    font-size: 12px;
-
-    line-height: 1.8;
-
-}
-
-
-/* =========================================
-   FEATURES
-========================================= */
-
-.features {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 11px;
-
-}
-
-
-.features div {
+.brand {
 
     display: flex;
 
@@ -269,60 +117,209 @@ input {
 
     gap: 10px;
 
-    color: #3f3653;
+    color: white;
 
-    font-size: 10px;
+    font-size: 24px;
 
-    font-weight: 600;
-
-}
-
-
-.features div:first-letter {
-
-    font-size: 16px;
+    font-weight: 800;
 
 }
 
 
-/* =========================================
-   LEFT BOTTOM
-========================================= */
+.brand span span {
 
-.left-bottom {
+    color: #c084fc;
+
+}
+
+
+.brand-icon {
+
+    width: 43px;
+
+    height: 43px;
 
     display: flex;
 
-    flex-wrap: wrap;
+    align-items: center;
 
-    gap: 7px;
+    justify-content: center;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.20);
+
+    border-radius: 11px;
 
 }
 
 
-.left-bottom span {
+/* =====================================
+   HERO
+===================================== */
 
-    padding: 7px 9px;
+.hero-content {
 
-    color: #41394e;
+    max-width: 580px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 7px 11px;
+
+    color: #ddd6fe;
 
     background:
-        rgba(255,255,255,0.70);
+        rgba(255,255,255,0.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
 
     border-radius: 5px;
 
-    font-size: 8px;
+    font-size: 9px;
 
-    font-weight: 600;
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
 
 }
 
 
-/* =========================================
-   RIGHT
-========================================= */
+.hero-content h1 {
 
-.right-section {
+    color: white;
+
+    font-size:
+        clamp(38px, 4vw, 58px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero-content h1 span {
+
+    color: #c084fc;
+
+}
+
+
+.hero-content > p {
+
+    max-width: 500px;
+
+    color: #e5e1eb;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =====================================
+   FEATURES
+===================================== */
+
+.features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.feature-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 10px;
+
+}
+
+
+.feature h3 {
+
+    color: white;
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.feature p {
+
+    color: #d8d2e2;
+
+    font-size: 9px;
+
+}
+
+
+.copyright {
+
+    color: #cfc7da;
+
+    font-size: 9px;
+
+}
+
+
+/* =====================================
+   RIGHT SECTION
+===================================== */
+
+.register-section {
 
     min-height: 100vh;
 
@@ -332,8 +329,7 @@ input {
 
     justify-content: center;
 
-    padding:
-        35px 65px;
+    padding: 40px 50px;
 
     background: white;
 
@@ -344,157 +340,60 @@ input {
 
     width: 100%;
 
-    max-width: 470px;
+    max-width: 410px;
 
 }
 
 
-/* =========================================
-   MOBILE LOGO
-========================================= */
+/* =====================================
+   MOBILE BRAND
+===================================== */
 
-.mobile-logo {
+.mobile-brand {
 
     display: none;
 
 }
 
 
-/* =========================================
+/* =====================================
    HEADING
-========================================= */
+===================================== */
 
-.heading {
+.register-heading {
 
-    margin-bottom: 22px;
+    margin-bottom: 28px;
 
 }
 
 
-.welcome {
+.register-heading h2 {
+
+    color: #1c1d1f;
+
+    font-size: 31px;
 
     margin-bottom: 8px;
 
-    color: #6d28d9;
+}
 
-    font-size: 10px;
 
-    font-weight: 700;
+.register-heading p {
+
+    color: #6a6f73;
+
+    font-size: 13px;
 
 }
 
 
-.heading h2 {
-
-    margin-bottom: 8px;
-
-    color: #171717;
-
-    font-size: 30px;
-
-    letter-spacing: -1px;
-
-}
-
-
-.heading p:last-child {
-
-    color: #777b80;
-
-    font-size: 10px;
-
-    line-height: 1.6;
-
-}
-
-
-/* =========================================
-   STEPS
-========================================= */
-
-.steps {
-
-    display: flex;
-
-    align-items: center;
-
-    margin-bottom: 22px;
-
-}
-
-
-.step {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 6px;
-
-    color: #9ca3af;
-
-    font-size: 9px;
-
-    font-weight: 600;
-
-}
-
-
-.step span {
-
-    width: 24px;
-    height: 24px;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #f0f0f2;
-
-    font-size: 9px;
-
-}
-
-
-.step.active {
-
-    color: #6d28d9;
-
-}
-
-
-.step.active span {
-
-    color: white;
-
-    background: #6d28d9;
-
-}
-
-
-.line {
-
-    width: 50px;
-
-    height: 1px;
-
-    margin: 0 9px;
-
-    background: #e4e5e7;
-
-}
-
-
-/* =========================================
+/* =====================================
    INPUT
-========================================= */
+===================================== */
 
 .input-group {
 
-    margin-bottom: 14px;
+    margin-bottom: 17px;
 
 }
 
@@ -503,11 +402,11 @@ input {
 
     display: block;
 
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 
-    color: #303236;
+    color: #2d2f31;
 
-    font-size: 9px;
+    font-size: 13px;
 
     font-weight: 700;
 
@@ -518,69 +417,56 @@ input {
 
     width: 100%;
 
-    height: 45px;
+    height: 50px;
 
-    padding: 0 13px;
+    padding: 0 14px;
 
     border:
-        1px solid #dcdfe3;
+        1px solid #b8bcc1;
 
-    border-radius: 6px;
+    border-radius: 4px;
 
     outline: none;
 
-    color: #171717;
-
-    background: white;
-
-    font-size: 10px;
-
-    transition: 0.2s;
+    font-size: 14px;
 
 }
 
 
 .input-group input:focus {
 
-    border-color: #7c3aed;
+    border-color: #5624d0;
 
     box-shadow:
-        0 0 0 3px
-        rgba(124,58,237,0.08);
+        0 0 0 2px
+        rgba(86,36,208,0.10);
 
 }
 
 
-.input-group input::placeholder {
-
-    color: #a4a7ab;
-
-}
-
-
-/* =========================================
+/* =====================================
    PASSWORD
-========================================= */
+===================================== */
 
-.password-box {
+.password-wrapper {
 
     position: relative;
 
 }
 
 
-.password-box input {
+.password-wrapper input {
 
-    padding-right: 45px;
+    padding-right: 48px;
 
 }
 
 
-.password-box button {
+.password-toggle {
 
     position: absolute;
 
-    right: 10px;
+    right: 13px;
 
     top: 50%;
 
@@ -593,122 +479,69 @@ input {
 
     cursor: pointer;
 
-    font-size: 14px;
-
 }
 
 
-/* =========================================
+/* =====================================
    PASSWORD STRENGTH
-========================================= */
+===================================== */
 
 .password-strength {
 
-    height: 3px;
+    display: none;
 
-    width: 0;
+    margin-top: 9px;
 
-    margin-top: 7px;
+    padding: 10px;
+
+    background: #f7f7f8;
 
     border-radius: 5px;
 
-    transition: 0.3s;
+    font-size: 10px;
+
+    line-height: 1.8;
 
 }
 
 
-.password-strength.weak {
+.password-strength.show {
 
-    width: 30%;
-
-    background: #ef4444;
+    display: block;
 
 }
 
 
-.password-strength.medium {
+.strength-title {
 
-    width: 65%;
+    margin-bottom: 2px;
 
-    background: #f59e0b;
+    color: #55595d;
 
-}
-
-
-.password-strength.strong {
-
-    width: 100%;
-
-    background: #22c55e;
+    font-weight: 700;
 
 }
 
 
-/* =========================================
-   REQUIREMENTS
-========================================= */
+.password-strength div {
 
-.requirements {
-
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 5px 12px;
-
-    margin-top: 7px;
+    color: #d11a2a;
 
 }
 
 
-.requirements span {
+.password-strength div.valid {
 
-    color: #9ca3af;
-
-    font-size: 7px;
+    color: #16803c;
 
 }
 
 
-.requirements span.valid {
-
-    color: #16a34a;
-
-}
-
-
-/* =========================================
-   PASSWORD MATCH
-========================================= */
-
-.password-match {
-
-    margin-top: 5px;
-
-    font-size: 8px;
-
-}
-
-
-.password-match.success {
-
-    color: #16a34a;
-
-}
-
-
-.password-match.error {
-
-    color: #dc2626;
-
-}
-
-
-/* =========================================
+/* =====================================
    TERMS
-========================================= */
+===================================== */
 
-.terms {
+.terms-checkbox {
 
     display: flex;
 
@@ -716,62 +549,56 @@ input {
 
     gap: 8px;
 
-    margin: 15px 0;
+    margin: 3px 0 18px;
 
-    color: #777b80;
+    color: #666b70;
 
-    font-size: 8px;
+    font-size: 11px;
 
     line-height: 1.5;
 
-}
-
-
-.terms input {
-
-    margin-top: 1px;
-
-    accent-color: #6d28d9;
+    cursor: pointer;
 
 }
 
 
-.terms a {
+.terms-checkbox input {
 
-    color: #6d28d9;
+    margin-top: 2px;
 
-    font-weight: 600;
+    accent-color: #5624d0;
 
 }
 
 
-/* =========================================
-   BUTTON
-========================================= */
+.terms-checkbox a {
 
-.create-btn {
+    color: #5624d0;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================
+   CREATE BUTTON
+===================================== */
+
+.create-button {
 
     width: 100%;
 
-    height: 48px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 9px;
+    height: 51px;
 
     border: none;
 
-    border-radius: 6px;
+    border-radius: 4px;
+
+    background: #5624d0;
 
     color: white;
 
-    background: #6d28d9;
-
-    font-size: 10px;
+    font-size: 15px;
 
     font-weight: 700;
 
@@ -782,137 +609,217 @@ input {
 }
 
 
-.create-btn:hover {
+.create-button:hover {
 
-    background: #5b21b6;
-
-    transform:
-        translateY(-1px);
-
-    box-shadow:
-        0 8px 20px
-        rgba(109,40,217,0.20);
+    background: #401b9c;
 
 }
 
 
-.create-btn:disabled {
+/* =====================================
+   DIVIDER
+===================================== */
 
-    opacity: .6;
+.divider {
 
-    cursor: not-allowed;
+    display: flex;
 
-}
+    align-items: center;
 
+    gap: 12px;
 
-/* =========================================
-   MESSAGE
-========================================= */
-
-.message {
-
-    display: none;
-
-    margin-top: 12px;
-
-    padding: 10px;
-
-    border-radius: 6px;
-
-    text-align: center;
-
-    font-size: 8px;
+    margin: 22px 0;
 
 }
 
 
-.message.success {
+.divider span {
 
-    display: block;
+    flex: 1;
 
-    color: #166534;
+    height: 1px;
 
-    background: #f0fdf4;
-
-}
-
-
-.message.error {
-
-    display: block;
-
-    color: #b91c1c;
-
-    background: #fef2f2;
+    background: #e2e3e5;
 
 }
 
 
-/* =========================================
-   LOGIN
-========================================= */
+.divider p {
 
-.login-text {
+    color: #8a8f94;
 
-    margin-top: 20px;
-
-    text-align: center;
-
-    color: #777b80;
-
-    font-size: 9px;
-
-}
-
-
-.login-text a {
-
-    color: #6d28d9;
+    font-size: 11px;
 
     font-weight: 700;
 
 }
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* =====================================
+   GOOGLE BUTTON
+===================================== */
 
-@media (max-width: 1000px) {
+.google-button {
+
+    width: 100%;
+
+    height: 51px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: white;
+
+    border:
+        1px solid #b8bcc1;
+
+    border-radius: 4px;
+
+    color: #2d2f31;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.google-button:hover {
+
+    background: #f7f7f8;
+
+    border-color: #8b8f94;
+
+}
+
+
+.google-button img {
+
+    width: 19px;
+
+    height: 19px;
+
+}
+
+
+/* =====================================
+   LOGIN
+===================================== */
+
+.login-link {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid #e5e7eb;
+
+    font-size: 12px;
+
+}
+
+
+.login-link span {
+
+    color: #6a6f73;
+
+}
+
+
+.login-link a {
+
+    color: #5624d0;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================
+   TOAST
+===================================== */
+
+.toast {
+
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    border-radius: 4px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+}
+
+
+.toast.show {
+
+    display: block;
+
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
 
     .register-page {
 
-        grid-template-columns:
-            42% 58%;
+        grid-template-columns: 48% 52%;
 
     }
 
 
-    .left-content {
+    .image-content {
 
         padding: 35px;
 
     }
 
 
-    .right-section {
+    .hero-content h1 {
 
-        padding:
-            30px 35px;
+        font-size: 42px;
 
     }
 
 
-    .left-middle h1 {
+    .register-section {
 
-        font-size: 42px;
+        padding: 30px;
 
     }
 
 }
 
 
-@media (max-width: 750px) {
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
 
     .register-page {
 
@@ -921,24 +828,23 @@ input {
     }
 
 
-    .left-section {
+    .image-section {
 
         display: none;
 
     }
 
 
-    .right-section {
+    .register-section {
 
         min-height: 100vh;
 
-        padding:
-            25px 18px;
+        padding: 30px 20px;
 
         background:
             linear-gradient(
                 135deg,
-                #faf8ff,
+                #f8f6ff,
                 #ffffff
             );
 
@@ -947,58 +853,78 @@ input {
 
     .register-container {
 
-        max-width: 450px;
+        max-width: 430px;
 
     }
 
 
-    .mobile-logo {
+    .mobile-brand {
 
         display: flex;
 
+        align-items: center;
+
         justify-content: center;
 
-        margin-bottom: 30px;
+        gap: 9px;
+
+        margin-bottom: 35px;
+
+        color: #1c1d1f;
+
+        font-size: 22px;
+
+        font-weight: 800;
 
     }
 
 
-    .heading {
+    .mobile-brand span span {
+
+        color: #5624d0;
+
+    }
+
+
+    .mobile-brand .brand-icon {
+
+        color: white;
+
+        background:
+            linear-gradient(
+                135deg,
+                #5624d0,
+                #8b5cf6
+            );
+
+    }
+
+
+    .register-heading {
 
         text-align: center;
-
-    }
-
-
-    .heading h2 {
-
-        font-size: 27px;
 
     }
 
 }
 
 
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
 @media (max-width: 400px) {
 
-    .right-section {
+    .register-section {
 
-        padding:
-            22px 15px;
-
-    }
-
-
-    .heading h2 {
-
-        font-size: 24px;
+        padding: 25px 16px;
 
     }
 
 
-    .requirements {
+    .register-heading h2 {
 
-        gap: 5px 8px;
+        font-size: 27px;
 
     }
 
