@@ -1,48 +1,54 @@
-// Select the form and message element
 const form = document.querySelector(".learning-form");
-const message = document.querySelector("#form-message");
+const subjects = document.querySelectorAll('input[name="subjects"]');
+const question = document.querySelector("#question");
+const characterCount = document.querySelector("#characterCount");
+const formMessage = document.querySelector("#formMessage");
 
-// Run this function when the form is submitted
+/* Purple style when a subject is selected */
+subjects.forEach(function (subject) {
+  subject.addEventListener("change", function () {
+    const card = subject.closest(".subject-card");
+
+    if (subject.checked) {
+      card.classList.add("selected");
+    } else {
+      card.classList.remove("selected");
+    }
+  });
+});
+
+/* Update character count while typing */
+question.addEventListener("input", function () {
+  characterCount.textContent = question.value.length;
+});
+
+/* Validate form on submit */
 form.addEventListener("submit", function (event) {
-
-  // Stop the page from reloading
   event.preventDefault();
 
-  // Find all selected subjects
   const selectedSubjects = document.querySelectorAll(
     'input[name="subjects"]:checked'
   );
 
-  // Get the written question
-  const question = document.querySelector("#question").value.trim();
-
-  // Check whether a subject is selected
   if (selectedSubjects.length === 0) {
-    message.textContent = "Please select at least one subject.";
-    message.className = "form-message error";
+    formMessage.textContent = "Please select at least one subject.";
+    formMessage.className = "form-message error";
     return;
   }
 
-  // Check whether a question is written
-  if (question === "") {
-    message.textContent = "Please write your question.";
-    message.className = "form-message error";
+  if (question.value.trim() === "") {
+    formMessage.textContent = "Please write your question.";
+    formMessage.className = "form-message error";
     return;
   }
 
-  // Store the selected subject names
-  const subjectNames = [];
+  formMessage.textContent = "Your question has been submitted successfully.";
+  formMessage.className = "form-message success";
 
-  selectedSubjects.forEach(function (subject) {
-    subjectNames.push(subject.value);
-  });
-
-  // Display a success message
-  message.textContent =
-    "Question submitted for: " + subjectNames.join(", ");
-
-  message.className = "form-message success";
-
-  // Clear the form
   form.reset();
+  characterCount.textContent = "0";
+
+  subjects.forEach(function (subject) {
+    subject.closest(".subject-card").classList.remove("selected");
+  });
 });

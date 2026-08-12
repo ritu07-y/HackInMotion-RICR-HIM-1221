@@ -1,84 +1,122 @@
+* {
+  box-sizing: border-box;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #222;
-      background-color: #f4f5f7;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #25233a;
+  background: #f6f6fb;
+}
 
-    /* Header */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 16px 30px;
-      background-color: white;
-      border-bottom: 1px solid #ddd;
-    }
+/* Header */
 
-    .logo {
-      font-size: 20px;
-      font-weight: bold;
-    }
+header {
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7%;
+  background: white;
+  border-bottom: 1px solid #e8e8f0;
+}
 
-    /* Profile dropdown */
-    details {
-      position: relative;
-    }
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+}
 
-    summary {
-      padding: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      list-style: none;
-    }
+.logo span {
+  color: #6c5ce7;
+}
 
-    .profile-menu {
-      position: absolute;
-      top: 45px;
-      right: 0;
-      width: 180px;
-      padding: 8px;
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
+details {
+  position: relative;
+}
 
-    .profile-menu a {
-      display: block;
-      padding: 10px;
-      color: #222;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+}
 
-    .profile-menu a:hover {
-      background-color: #f0f0f0;
-    }
+summary::-webkit-details-marker {
+  display: none;
+}
 
-    /* Main content */
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+summary strong,
+summary small {
+  display: block;
+}
 
-    .welcome {
-      margin-bottom: 30px;
-    }
+summary small {
+  margin-top: 3px;
+  color: #77798c;
+  font-size: 12px;
+}
 
-    .welcome h1 {
-      margin-bottom: 5px;
-    }
+.avatar {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  background: #6c5ce7;
+  border-radius: 50%;
+}
+
+.profile-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  z-index: 1;
+  width: 180px;
+  padding: 8px;
+  background: white;
+  border: 1px solid #e8e8f0;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(31, 32, 60, 0.12);
+}
+
+.profile-menu a {
+  display: block;
+  padding: 10px;
+  color: #25233a;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.profile-menu a:hover {
+  background: #f3f1ff;
+}
+
+/* Main area */
+
+main {
+  max-width: 1050px;
+  margin: 45px auto;
+  padding: 0 20px;
+}
+
+.welcome {
+  margin-bottom: 25px;
+}
+
+.welcome h1 {
+  margin: 0;
+  font-size: 34px;
+}
 
 .learning-section {
-  margin-top: 35px;
   padding: 32px;
-  background-color: white;
+  background: white;
   border: 1px solid #e8e8f0;
   border-radius: 18px;
-  box-shadow: 0 6px 20px rgba(31, 32, 60, 0.06);
+  box-shadow: 0 8px 25px rgba(31, 32, 60, 0.06);
 }
 
 .section-heading {
@@ -90,16 +128,15 @@
   color: #6c5ce7;
   font-size: 12px;
   font-weight: bold;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
 }
 
 .section-heading h2 {
   margin: 0 0 8px;
-  color: #202234;
   font-size: 26px;
 }
 
-.section-heading p {
+.section-heading p:last-child {
   margin: 0;
   color: #77798c;
 }
@@ -116,23 +153,23 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 18px;
+  padding: 17px;
   cursor: pointer;
-  background-color: #fafaff;
+  background: #fbfaff;
   border: 1px solid #e8e8f0;
   border-radius: 12px;
   transition: 0.2s;
 }
 
-.subject-card:hover {
+.subject-card:hover,
+.subject-card.selected {
+  background: #f3f1ff;
   border-color: #6c5ce7;
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(108, 92, 231, 0.1);
+  box-shadow: 0 7px 16px rgba(108, 92, 231, 0.12);
 }
 
 .subject-card input {
-  width: 17px;
-  height: 17px;
   accent-color: #6c5ce7;
 }
 
@@ -144,7 +181,7 @@
   flex-shrink: 0;
   color: #6c5ce7;
   font-weight: bold;
-  background-color: #eeeaff;
+  background: #eae6ff;
   border-radius: 10px;
 }
 
@@ -155,20 +192,20 @@
 
 .subject-card strong {
   margin-bottom: 4px;
-  color: #202234;
 }
 
 .subject-card small {
   color: #77798c;
+  font-size: 12px;
   line-height: 1.4;
 }
 
-/* Question area */
+/* Question box */
 
 .question-box {
   margin-top: 30px;
   padding: 25px;
-  background-color: #f8f7ff;
+  background: #f8f7ff;
   border: 1px solid #e4e0ff;
   border-radius: 14px;
 }
@@ -188,7 +225,7 @@
   color: white;
   font-size: 20px;
   font-weight: bold;
-  background-color: #6c5ce7;
+  background: #6c5ce7;
   border-radius: 50%;
 }
 
@@ -208,48 +245,73 @@
   font-weight: bold;
 }
 
-.question-box textarea {
+textarea {
   width: 100%;
   padding: 14px;
   font: inherit;
   resize: vertical;
-  background-color: white;
   border: 1px solid #dcdcea;
   border-radius: 10px;
   outline: none;
 }
 
-.question-box textarea:focus {
+textarea:focus {
   border-color: #6c5ce7;
   box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.12);
 }
 
+.character-count {
+  margin: 7px 0;
+  color: #77798c;
+  font-size: 12px;
+  text-align: right;
+}
+
 .ask-button {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 12px 20px;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  background-color: #6c5ce7;
+  background: #6c5ce7;
   border: none;
   border-radius: 9px;
 }
 
 .ask-button:hover {
-  background-color: #5947d5;
+  background: #5947d5;
 }
 
-/* Tablet */
+.form-message {
+  margin: 14px 0 0;
+  font-weight: bold;
+}
 
-@media (max-width: 900px) {
+.success {
+  color: #16865f;
+}
+
+.error {
+  color: #d63031;
+}
+
+/* Responsive design */
+
+@media (max-width: 800px) {
   .subject-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Mobile */
+@media (max-width: 550px) {
+  header {
+    padding: 0 20px;
+  }
 
-@media (max-width: 600px) {
+  summary small {
+    display: none;
+  }
+
   .learning-section {
     padding: 20px;
   }
@@ -262,5 +324,3 @@
     width: 100%;
   }
 }
-
-    
