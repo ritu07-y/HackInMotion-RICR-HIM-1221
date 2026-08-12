@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style1.css">
+
+  <title>1211 RICR Dashboard</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">1211 <span>RICR</span></div>
+
+    <details>
+      <summary>
+        <span class="avatar">AR</span>
+
+        <span>
+          <strong>Alex Rivera</strong>
+          <small>Student</small>
+        </span>
+
+        <span>⌄</span>
+      </summary>
+
+      <div class="profile-menu">
+        <a href="#">Add Profile</a>
+        <a href="#">Settings</a>
+        <a href="#">Log Out</a>
+      </div>
+    </details>
+  </header>
+
+  <main>
+    <section class="welcome">
+      <h1>Welcome back, Alex!</h1>
+    </section>
+
+    <section class="learning-section">
+      <div class="section-heading">
+        <p class="section-label">LEARNING SUPPORT</p>
+        <h2>What would you like to study?</h2>
+        <p>Select one or more subjects to get started.</p>
+      </div>
+
+      <form class="learning-form">
+
+        <div class="subject-grid">
+
+          <label class="subject-card">
+            <input type="checkbox" name="subjects" value="Mathematics">
+            <span class="subject-icon">∑</span>
+            <span>
+              <strong>Mathematics</strong>
+              <small>Algebra, calculus and geometry</small>
+            </span>
+          </label>
+
+          <label class="subject-card">
+            <input type="checkbox" name="subjects" value="Physics">
+            <span class="subject-icon">⚛</span>
+            <span>
+              <strong>Physics</strong>
+              <small>Motion, energy and electricity</small>
+            </span>
+          </label>
+
+          <label class="subject-card">
+            <input type="checkbox" name="subjects" value="Chemistry">
+            <span class="subject-icon">⚗</span>
+            <span>
+              <strong>Chemistry</strong>
+              <small>Atoms, reactions and elements</small>
+            </span>
+          </label>
+
+          <label class="subject-card">
+            <input type="checkbox" name="subjects" value="Biology">
+            <span class="subject-icon">♧</span>
+            <span>
+              <strong>Biology</strong>
+              <small>Life, cells and human biology</small>
+            </span>
+          </label>
+
+          <label class="subject-card">
+            <input type="checkbox" name="subjects" value="Computer Science">
+            <span class="subject-icon">&lt;/&gt;</span>
+            <span>
+              <strong>Computer Science</strong>
+              <small>Programming and technology</small>
+            </span>
+          </label>
+
+          <label class="subject-card">
+            <input type="checkbox" name="subjects" value="English">
+            <span class="subject-icon">Aa</span>
+            <span>
+              <strong>English</strong>
+              <small>Grammar, reading and writing</small>
+            </span>
+          </label>
+
+        </div>
+
+        <div class="question-box">
+          <div class="question-heading">
+            <div class="question-icon">?</div>
+
+            <div>
+              <h2>Ask a question</h2>
+              <p>Tell us what you are having difficulty understanding.</p>
+            </div>
+          </div>
+
+          <label for="question">Your question</label>
+
+          <textarea
+            id="question"
+            name="question"
+            rows="5"
+            maxlength="300"
+            placeholder="For example: Can you explain Newton's second law?"
+          ></textarea>
+
+          <p class="character-count">
+            <span id="characterCount">0</span>/300 characters
+          </p>
+
+          <button class="ask-button" type="submit">
+            Submit question
+          </button>
+
+          <p id="formMessage" class="form-message"></p>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <script src="script1.js"></script>
+</body>
