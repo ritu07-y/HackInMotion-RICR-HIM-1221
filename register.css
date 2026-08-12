@@ -1,0 +1,931 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #1c1d1f;
+
+    background: #ffffff;
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* =====================================
+   MAIN
+===================================== */
+
+.register-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 55% 45%;
+
+}
+
+
+/* =====================================
+   LEFT IMAGE
+===================================== */
+
+.image-section {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+}
+
+
+.hero-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(25, 15, 50, 0.90),
+            rgba(64, 35, 100, 0.62),
+            rgba(70, 40, 110, 0.35)
+        );
+
+}
+
+
+.image-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 100vh;
+
+    padding: 45px 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+}
+
+
+/* =====================================
+   BRAND
+===================================== */
+
+.brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+}
+
+
+.brand span span {
+
+    color: #c084fc;
+
+}
+
+
+.brand-icon {
+
+    width: 43px;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.20);
+
+    border-radius: 11px;
+
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero-content {
+
+    max-width: 580px;
+
+}
+
+
+.badge {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    padding: 7px 11px;
+
+    color: #ddd6fe;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 5px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+}
+
+
+.hero-content h1 {
+
+    color: white;
+
+    font-size:
+        clamp(38px, 4vw, 58px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero-content h1 span {
+
+    color: #c084fc;
+
+}
+
+
+.hero-content > p {
+
+    max-width: 500px;
+
+    color: #e5e1eb;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* =====================================
+   FEATURES
+===================================== */
+
+.features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.feature-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 10px;
+
+}
+
+
+.feature h3 {
+
+    color: white;
+
+    font-size: 11px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.feature p {
+
+    color: #d8d2e2;
+
+    font-size: 9px;
+
+}
+
+
+.copyright {
+
+    color: #cfc7da;
+
+    font-size: 9px;
+
+}
+
+
+/* =====================================
+   RIGHT SECTION
+===================================== */
+
+.register-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 50px;
+
+    background: white;
+
+}
+
+
+.register-container {
+
+    width: 100%;
+
+    max-width: 410px;
+
+}
+
+
+/* =====================================
+   MOBILE BRAND
+===================================== */
+
+.mobile-brand {
+
+    display: none;
+
+}
+
+
+/* =====================================
+   HEADING
+===================================== */
+
+.register-heading {
+
+    margin-bottom: 28px;
+
+}
+
+
+.register-heading h2 {
+
+    color: #1c1d1f;
+
+    font-size: 31px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.register-heading p {
+
+    color: #6a6f73;
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================
+   INPUT
+===================================== */
+
+.input-group {
+
+    margin-bottom: 17px;
+
+}
+
+
+.input-group label {
+
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #2d2f31;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.input-group input {
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 14px;
+
+    border:
+        1px solid #b8bcc1;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    font-size: 14px;
+
+}
+
+
+.input-group input:focus {
+
+    border-color: #5624d0;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(86,36,208,0.10);
+
+}
+
+
+/* =====================================
+   PASSWORD
+===================================== */
+
+.password-wrapper {
+
+    position: relative;
+
+}
+
+
+.password-wrapper input {
+
+    padding-right: 48px;
+
+}
+
+
+.password-toggle {
+
+    position: absolute;
+
+    right: 13px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================
+   PASSWORD STRENGTH
+===================================== */
+
+.password-strength {
+
+    display: none;
+
+    margin-top: 9px;
+
+    padding: 10px;
+
+    background: #f7f7f8;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+
+}
+
+
+.password-strength.show {
+
+    display: block;
+
+}
+
+
+.strength-title {
+
+    margin-bottom: 2px;
+
+    color: #55595d;
+
+    font-weight: 700;
+
+}
+
+
+.password-strength div {
+
+    color: #d11a2a;
+
+}
+
+
+.password-strength div.valid {
+
+    color: #16803c;
+
+}
+
+
+/* =====================================
+   TERMS
+===================================== */
+
+.terms-checkbox {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    margin: 3px 0 18px;
+
+    color: #666b70;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    cursor: pointer;
+
+}
+
+
+.terms-checkbox input {
+
+    margin-top: 2px;
+
+    accent-color: #5624d0;
+
+}
+
+
+.terms-checkbox a {
+
+    color: #5624d0;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================
+   CREATE BUTTON
+===================================== */
+
+.create-button {
+
+    width: 100%;
+
+    height: 51px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background: #5624d0;
+
+    color: white;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.create-button:hover {
+
+    background: #401b9c;
+
+}
+
+
+/* =====================================
+   DIVIDER
+===================================== */
+
+.divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 22px 0;
+
+}
+
+
+.divider span {
+
+    flex: 1;
+
+    height: 1px;
+
+    background: #e2e3e5;
+
+}
+
+
+.divider p {
+
+    color: #8a8f94;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================
+   GOOGLE BUTTON
+===================================== */
+
+.google-button {
+
+    width: 100%;
+
+    height: 51px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    background: white;
+
+    border:
+        1px solid #b8bcc1;
+
+    border-radius: 4px;
+
+    color: #2d2f31;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.google-button:hover {
+
+    background: #f7f7f8;
+
+    border-color: #8b8f94;
+
+}
+
+
+.google-button img {
+
+    width: 19px;
+
+    height: 19px;
+
+}
+
+
+/* =====================================
+   LOGIN
+===================================== */
+
+.login-link {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 25px;
+
+    padding-top: 22px;
+
+    border-top:
+        1px solid #e5e7eb;
+
+    font-size: 12px;
+
+}
+
+
+.login-link span {
+
+    color: #6a6f73;
+
+}
+
+
+.login-link a {
+
+    color: #5624d0;
+
+    font-weight: 700;
+
+}
+
+
+/* =====================================
+   TOAST
+===================================== */
+
+.toast {
+
+    display: none;
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    border-radius: 4px;
+
+    text-align: center;
+
+    font-size: 12px;
+
+}
+
+
+.toast.show {
+
+    display: block;
+
+}
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 900px) {
+
+    .register-page {
+
+        grid-template-columns: 48% 52%;
+
+    }
+
+
+    .image-content {
+
+        padding: 35px;
+
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 42px;
+
+    }
+
+
+    .register-section {
+
+        padding: 30px;
+
+    }
+
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 700px) {
+
+    .register-page {
+
+        display: block;
+
+    }
+
+
+    .image-section {
+
+        display: none;
+
+    }
+
+
+    .register-section {
+
+        min-height: 100vh;
+
+        padding: 30px 20px;
+
+        background:
+            linear-gradient(
+                135deg,
+                #f8f6ff,
+                #ffffff
+            );
+
+    }
+
+
+    .register-container {
+
+        max-width: 430px;
+
+    }
+
+
+    .mobile-brand {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        gap: 9px;
+
+        margin-bottom: 35px;
+
+        color: #1c1d1f;
+
+        font-size: 22px;
+
+        font-weight: 800;
+
+    }
+
+
+    .mobile-brand span span {
+
+        color: #5624d0;
+
+    }
+
+
+    .mobile-brand .brand-icon {
+
+        color: white;
+
+        background:
+            linear-gradient(
+                135deg,
+                #5624d0,
+                #8b5cf6
+            );
+
+    }
+
+
+    .register-heading {
+
+        text-align: center;
+
+    }
+
+}
+
+
+/* =====================================
+   SMALL MOBILE
+===================================== */
+
+@media (max-width: 400px) {
+
+    .register-section {
+
+        padding: 25px 16px;
+
+    }
+
+
+    .register-heading h2 {
+
+        font-size: 27px;
+
+    }
+
+}

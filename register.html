@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Create Account | LearnAI</title>
+
+    <link rel="stylesheet" href="register.css">
+
+</head>
+
+<body>
+
+
+<div class="register-page">
+
+
+    <!-- ==============================
+         LEFT IMAGE / BRAND SECTION
+    =============================== -->
+
+    <section class="image-section">
+<!-- 
+        <img
+            src="images/ai-learning.jpg"
+            alt="AI Learning Assistant and Personalized Study Planner"
+            class="hero-image"
+        > -->
+
+        <div class="image-overlay"></div>
+
+
+        <div class="image-content">
+
+
+            <!-- BRAND -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🧠
+                </div>
+
+                <span>
+                    Learn<span>AI</span>
+                </span>
+
+            </div>
+
+
+            <!-- MAIN CONTENT -->
+
+            <div class="hero-content">
+
+                <span class="badge">
+                    AI-POWERED LEARNING
+                </span>
+
+
+                <h1>
+                    Start your
+                    <br>
+                    <span>smarter learning</span>
+                    journey.
+                </h1>
+
+
+                <p>
+                    Create your account and get a personalized
+                    learning experience designed around your
+                    goals, schedule and learning needs.
+                </p>
+
+
+                <!-- FEATURES -->
+
+                <div class="features">
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            🤖
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                AI Learning Assistant
+                            </h3>
+
+                            <p>
+                                Get personalized help and
+                                explanations whenever you need them.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Personalized Study Planner
+                            </h3>
+
+                            <p>
+                                Get a study plan based on your
+                                goals, subjects and available time.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📈
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Track Your Progress
+                            </h3>
+
+                            <p>
+                                Monitor your learning and stay
+                                consistent with your goals.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <p class="copyright">
+                LearnAI • Learn smarter. Achieve more.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         RIGHT REGISTER SECTION
+    =============================== -->
+
+    <section class="register-section">
+
+
+        <div class="register-container">
+
+
+            <!-- MOBILE BRAND -->
+
+            <div class="mobile-brand">
+
+                <div class="brand-icon">
+                    🧠
+                </div>
+
+                <span>
+                    Learn<span>AI</span>
+                </span>
+
+            </div>
+
+
+
+            <!-- HEADING -->
+
+            <div class="register-heading">
+
+                <h2>
+                    Create Account
+                </h2>
+
+                <p>
+                    Start your personalized learning journey
+                </p>
+
+            </div>
+
+
+
+            <!-- REGISTER FORM -->
+
+            <form id="registerForm">
+
+
+                <!-- FULL NAME -->
+
+                <div class="input-group">
+
+                    <label for="registerName">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="registerEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="registerPassword">
+                        Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="Create a password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            onclick="togglePassword(
+                                'registerPassword',
+                                this
+                            )"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+
+                    <!-- Password strength -->
+
+                    <div
+                        id="passwordStrength"
+                        class="password-strength"
+                    >
+
+                        <div class="strength-title">
+                            Password must contain:
+                        </div>
+
+                        <div id="lengthCheck">
+                            ✕ At least 8 characters
+                        </div>
+
+                        <div id="uppercaseCheck">
+                            ✕ At least one uppercase letter
+                        </div>
+
+                        <div id="lowercaseCheck">
+                            ✕ At least one lowercase letter
+                        </div>
+
+                        <div id="numberCheck">
+                            ✕ At least one number
+                        </div>
+
+                        <div id="specialCheck">
+                            ✕ At least one special character
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            onclick="togglePassword(
+                                'confirmPassword',
+                                this
+                            )"
+                        >
+                            👁
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TERMS -->
+
+                <label class="terms-checkbox">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    <span>
+                        I agree to the
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+                    </span>
+
+                </label>
+
+
+
+                <!-- CREATE ACCOUNT -->
+
+                <button
+                    type="submit"
+                    class="create-button"
+                >
+                    Create Account
+                </button>
+
+
+            </form>
+
+
+
+            <!-- ==============================
+                 DIVIDER
+            =============================== -->
+
+            <div class="divider">
+
+                <span></span>
+
+                <p>OR</p>
+
+                <span></span>
+
+            </div>
+
+
+
+            <!-- ==============================
+                 GOOGLE
+            =============================== -->
+
+            <button
+                type="button"
+                class="google-button"
+                onclick="googleRegister()"
+            >
+
+                <img
+                    src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                    alt="Google"
+                >
+
+                <span>
+                    Continue with Google
+                </span>
+
+            </button>
+
+
+
+            <!-- LOGIN -->
+
+            <div class="login-link">
+
+                <span>
+                    Already have an account?
+                </span>
+
+                <a href="index.html">
+                    Log In
+                </a>
+
+            </div>
+
+
+            <!-- TOAST -->
+
+            <div
+                id="toast"
+                class="toast"
+            ></div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+<script src="register.js"></script>
+
+</body>
+
+</html>

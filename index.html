@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -143,4 +144,391 @@
 
   <script src="script.js"></script>
 </body>
+=======
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Login | LearnAI</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<div class="login-page">
+
+
+    <!-- =====================================
+         LEFT IMAGE SECTION
+    ====================================== -->
+
+    <section class="image-section">
+
+
+        <!-- <img
+            src="images/ai-learning.jpg"
+            alt="AI Learning Assistant"
+            class="hero-image"
+        > -->
+
+
+        <!-- Image overlay -->
+
+        <div class="image-overlay"></div>
+
+
+        <!-- Content over image -->
+
+        <div class="image-content">
+
+
+            <!-- Logo -->
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    🧠
+                </div>
+
+                <span>
+                    Learn<span>AI</span>
+                </span>
+
+            </div>
+
+
+            <!-- Main text -->
+
+            <div class="hero-text">
+
+                <p class="small-heading">
+                    AI-POWERED LEARNING
+                </p>
+
+
+                <h1>
+
+                    Learn smarter.
+                    <br>
+
+                    Plan better.
+                    <br>
+
+                    <span>Achieve more.</span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Your personal AI learning assistant
+                    that understands your goals and creates
+                    a personalized study plan just for you.
+
+                </p>
+
+
+                <!-- Features -->
+
+                <div class="features">
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            🤖
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                AI Learning Assistant
+                            </strong>
+
+                            <p>
+                                Get instant help whenever
+                                you need it.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Personalized Study Planner
+                            </strong>
+
+                            <p>
+                                Plan your studies around
+                                your goals and schedule.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="feature">
+
+                        <div class="feature-icon">
+                            📊
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Track Your Progress
+                            </strong>
+
+                            <p>
+                                Stay motivated and see
+                                your learning progress.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom -->
+
+            <p class="copyright">
+
+                LearnAI • Your journey to smarter learning
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================
+         RIGHT LOGIN SECTION
+    ====================================== -->
+
+    <section class="login-section">
+
+
+        <div class="login-container">
+
+
+            <!-- Mobile Logo -->
+
+            <div class="mobile-brand">
+
+                <div class="brand-icon">
+                    🧠
+                </div>
+
+                <span>
+                    Learn<span>AI</span>
+                </span>
+
+            </div>
+
+
+
+            <!-- Heading -->
+
+            <div class="login-heading">
+
+                <h2>
+                    Welcome Back
+                </h2>
+
+
+                <p>
+                    Log in to continue your learning journey
+                </p>
+
+            </div>
+
+
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            class="password-toggle"
+                            onclick="togglePassword()"
+                        >
+                            
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REMEMBER + FORGOT -->
+
+                <div class="login-options">
+
+
+                    <label class="remember">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a
+                        href="forgot-password.html"
+                        class="forgot-password"
+                    >
+                        Forgot Password?
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- LOGIN -->
+
+                <button
+                    type="submit"
+                    class="login-button"
+                >
+                    Log In
+                </button>
+
+
+            </form>
+
+
+
+            <!-- Message -->
+
+            <div
+                id="toast"
+                class="toast"
+            ></div>
+
+
+
+            <!-- Register -->
+
+            <div class="register-section">
+
+                <p>
+                    Don't have an account?
+                </p>
+
+
+                <a href="register.html">
+                    Create Account
+                </a>
+
+            </div>
+
+
+
+            <!-- Terms -->
+
+            <p class="terms">
+
+                By continuing, you agree to LearnAI's
+                <a href="#">Terms</a>
+                and
+                <a href="#">Privacy Policy</a>.
+
+            </p>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+>>>>>>> 3a2fef2e847344a269e68d8341244552af083355
 </html>

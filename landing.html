@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>LearnAI | AI Learning Assistant</title>
+
+    <link rel="stylesheet" href="landing.css">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+
+        <!-- LOGO -->
+
+        <a href="landing.html" class="logo">
+
+            <div class="logo-icon">
+                🧠
+            </div>
+
+            <span>
+                Learn<span class="logo-ai">AI</span>
+            </span>
+
+        </a>
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav class="nav-links">
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#features">
+                Features
+            </a>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+        </nav>
+
+
+        <!-- NAV BUTTONS -->
+
+        <div class="nav-actions">
+
+            <a
+                href="index.html"
+                class="login-btn"
+            >
+                Login
+            </a>
+
+            <a
+                href="register.html"
+                class="get-started-btn"
+            >
+                register now
+            </a>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()"
+        >
+            ☰
+        </button>
+
+    </div>
+
+
+    <!-- MOBILE NAV -->
+
+    <div
+        class="mobile-menu"
+        id="mobileMenu"
+    >
+
+        <a
+            href="#home"
+            onclick="closeMenu()"
+        >
+            Home
+        </a>
+
+        <a
+            href="#features"
+            onclick="closeMenu()"
+        >
+            Features
+        </a>
+
+        <a
+            href="#how-it-works"
+            onclick="closeMenu()"
+        >
+            How It Works
+        </a>
+
+        <a
+            href="#about"
+            onclick="closeMenu()"
+        >
+            About
+        </a>
+
+        <a href="index.html">
+            Login
+        </a>
+
+        <a
+            href="register.html"
+            class="mobile-start"
+        >
+            Get Started
+        </a>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO SECTION
+===================================================== -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-container">
+
+
+        <!-- LEFT CONTENT -->
+
+        <div class="hero-content">
+
+
+            <div class="hero-badge">
+
+                <span class="badge-dot"></span>
+
+                AI-Powered Learning Platform
+
+            </div>
+
+
+            <h1>
+
+                Learn smarter.
+
+                <span>
+                    Achieve more.
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Your personal AI learning assistant that
+                creates customized study plans, explains
+                difficult concepts, tracks your progress,
+                and adapts to the way you learn.
+
+            </p>
+
+
+            <!-- BUTTONS -->
+
+            <div class="hero-buttons">
+
+                <a
+                    href="register.html"
+                    class="primary-btn"
+                >
+
+                    Create My Study Plan
+
+                    <span>→</span>
+
+                </a>
+
+
+                <a
+                    href="#features"
+                    class="secondary-btn"
+                >
+
+                    Explore Features
+
+                </a>
+
+            </div>
+
+
+            <!-- TRUST -->
+
+            <div class="hero-trust">
+
+                <div class="trust-item">
+
+                    <span class="trust-icon">
+                        🤖
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            AI Powered
+                        </strong>
+
+                        <small>
+                            Personalized learning
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="trust-item">
+
+                    <span class="trust-icon">
+                        📊
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Smart Tracking
+                        </strong>
+
+                        <small>
+                            Monitor your progress
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RIGHT AI DASHBOARD -->
+
+        <div class="hero-visual">
+
+
+            <!-- Background circle -->
+
+            <div class="hero-circle circle-one"></div>
+
+            <div class="hero-circle circle-two"></div>
+
+
+            <!-- MAIN DASHBOARD -->
+
+            <div class="dashboard-card">
+
+
+                <!-- Dashboard header -->
+
+                <div class="dashboard-header">
+
+                    <div>
+
+                        <span class="dashboard-label">
+                            YOUR LEARNING DASHBOARD
+                        </span>
+
+                        <h3>
+                            Good morning, Learner 👋
+                        </h3>
+
+                    </div>
+
+
+                    <div class="profile-circle">
+                        👩🏻
+                    </div>
+
+                </div>
+
+
+                <!-- Progress -->
+
+                <div class="progress-card">
+
+                    <div class="progress-top">
+
+                        <div>
+
+                            <span>
+                                Overall Progress
+                            </span>
+
+                            <strong>
+                                72%
+                            </strong>
+
+                        </div>
+
+                        <span class="progress-up">
+                            ↑ 12%
+                        </span>
+
+                    </div>
+
+
+                    <div class="progress-bar">
+
+                        <span></span>
+
+                    </div>
+
+
+                    <small>
+                        You're doing great! Keep going.
+                    </small>
+
+                </div>
+
+
+                <!-- Today's Plan -->
+
+                <div class="today-section">
+
+                    <div class="section-title">
+
+                        <div>
+
+                            <span>
+                                TODAY'S PLAN
+                            </span>
+
+                            <strong>
+                                3 tasks remaining
+                            </strong>
+
+                        </div>
+
+                        <span class="calendar">
+                            📅
+                        </span>
+
+                    </div>
+
+
+                    <!-- Task 1 -->
+
+                    <div class="study-task completed">
+
+                        <div class="task-check">
+                            ✓
+                        </div>
+
+                        <div class="task-info">
+
+                            <strong>
+                                Python Fundamentals
+                            </strong>
+
+                            <small>
+                                30 min • Completed
+                            </small>
+
+                        </div>
+
+                        <span class="task-status">
+                            Done
+                        </span>
+
+                    </div>
+
+
+                    <!-- Task 2 -->
+
+                    <div class="study-task">
+
+                        <div class="task-check">
+                        </div>
+
+                        <div class="task-info">
+
+                            <strong>
+                                Data Structures
+                            </strong>
+
+                            <small>
+                                45 min • High Priority
+                            </small>
+
+                        </div>
+
+                        <span class="task-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+
+                    <!-- Task 3 -->
+
+                    <div class="study-task">
+
+                        <div class="task-check">
+                        </div>
+
+                        <div class="task-info">
+
+                            <strong>
+                                Practice Problems
+                            </strong>
+
+                            <small>
+                                30 min • Recommended
+                            </small>
+
+                        </div>
+
+                        <span class="task-arrow">
+                            →
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- AI FLOATING CARD -->
+
+            <div class="ai-floating-card">
+
+                <div class="ai-avatar">
+                    🤖
+                </div>
+
+                <div>
+
+                    <strong>
+                        AI Recommendation
+                    </strong>
+
+                    <p>
+                        Revise Recursion before
+                        starting Dynamic Programming.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- STREAK CARD -->
+
+            <div class="streak-card">
+
+                <span>
+                    🔥
+                </span>
+
+                <div>
+
+                    <strong>
+                        7 Day Streak
+                    </strong>
+
+                    <small>
+                        Keep learning!
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section class="stats-section">
+
+    <div class="stats-container">
+
+
+        <div class="stat">
+
+            <strong>
+                AI
+            </strong>
+
+            <span>
+                Personalized Assistance
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                24/7
+            </strong>
+
+            <span>
+                Learning Support
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                100%
+            </strong>
+
+            <span>
+                Personalized Plans
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                ∞
+            </strong>
+
+            <span>
+                Learning Possibilities
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURES
+===================================================== -->
+
+<section
+    class="features-section"
+    id="features"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <span>
+                POWERFUL FEATURES
+            </span>
+
+            <h2>
+                Everything you need
+                <br>
+                to learn <em>better.</em>
+            </h2>
+
+            <p>
+                One intelligent platform that understands
+                your learning goals and helps you reach them.
+            </p>
+
+        </div>
+
+
+        <div class="features-grid">
+
+
+            <!-- FEATURE 1 -->
+
+            <div class="feature-card featured">
+
+                <div class="feature-icon purple">
+                    🤖
+                </div>
+
+                <span class="feature-number">
+                    01
+                </span>
+
+                <h3>
+                    AI Learning Assistant
+                </h3>
+
+                <p>
+                    Ask questions, get instant explanations,
+                    generate examples, and learn concepts
+                    in a way that makes sense to you.
+                </p>
+
+                <div class="feature-preview chat-preview">
+
+                    <div class="chat-message user-message">
+                        Explain recursion simply.
+                    </div>
+
+                    <div class="chat-message ai-message">
+
+                        🤖 Think of recursion like
+                        solving a smaller version
+                        of the same problem...
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURE 2 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon blue">
+                    📅
+                </div>
+
+                <span class="feature-number">
+                    02
+                </span>
+
+                <h3>
+                    Personalized Study Planner
+                </h3>
+
+                <p>
+                    Tell us your goal, available time,
+                    subjects and deadline. AI creates
+                    a study plan designed for you.
+                </p>
+
+                <div class="mini-plan">
+
+                    <div>
+                        <span>✓</span>
+                        Arrays
+                        <small>30 min</small>
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Recursion
+                        <small>45 min</small>
+                    </div>
+
+                    <div>
+                        <span>○</span>
+                        Practice
+                        <small>30 min</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURE 3 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon green">
+                    📊
+                </div>
+
+                <span class="feature-number">
+                    03
+                </span>
+
+                <h3>
+                    Progress Tracking
+                </h3>
+
+                <p>
+                    Track your learning journey with
+                    meaningful insights into your
+                    strengths and weaknesses.
+                </p>
+
+                <div class="mini-chart">
+
+                    <div class="chart-bar bar-1"></div>
+
+                    <div class="chart-bar bar-2"></div>
+
+                    <div class="chart-bar bar-3"></div>
+
+                    <div class="chart-bar bar-4"></div>
+
+                    <div class="chart-bar bar-5"></div>
+
+                    <div class="chart-bar bar-6"></div>
+
+                    <div class="chart-bar bar-7"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURE 4 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon orange">
+                    🧠
+                </div>
+
+                <span class="feature-number">
+                    04
+                </span>
+
+                <h3>
+                    Adaptive Learning
+                </h3>
+
+                <p>
+                    Your study plan evolves with your
+                    performance. AI identifies weak areas
+                    and adjusts what you should learn next.
+                </p>
+
+                <div class="adaptive-flow">
+
+                    <span>
+                        Performance
+                    </span>
+
+                    <b>
+                        →
+                    </b>
+
+                    <span>
+                        AI Analysis
+                    </span>
+
+                    <b>
+                        →
+                    </b>
+
+                    <span>
+                        New Plan
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- FEATURE 5 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon pink">
+                    🎯
+                </div>
+
+                <span class="feature-number">
+                    05
+                </span>
+
+                <h3>
+                    Smart Recommendations
+                </h3>
+
+                <p>
+                    Get intelligent suggestions about
+                    what to study, revise or practice next.
+                </p>
+
+            </div>
+
+
+            <!-- FEATURE 6 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon yellow">
+                    🔔
+                </div>
+
+                <span class="feature-number">
+                    06
+                </span>
+
+                <h3>
+                    Smart Reminders
+                </h3>
+
+                <p>
+                    Stay consistent with timely reminders
+                    and daily learning goals.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section
+    class="how-section"
+    id="how-it-works"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading center">
+
+            <span>
+                HOW IT WORKS
+            </span>
+
+            <h2>
+                Your personalized
+                <em>learning journey.</em>
+            </h2>
+
+            <p>
+                Start learning in just three simple steps.
+            </p>
+
+        </div>
+
+
+        <div class="steps-container">
+
+
+            <!-- STEP 1 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    Set Your Goal
+                </h3>
+
+                <p>
+                    Tell the AI what you want to learn,
+                    your current level, available time
+                    and target date.
+                </p>
+
+            </div>
+
+
+            <div class="step-connector">
+                →
+            </div>
+
+
+            <!-- STEP 2 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    AI Builds Your Plan
+                </h3>
+
+                <p>
+                    Our AI analyzes your goals and creates
+                    a personalized learning schedule.
+                </p>
+
+            </div>
+
+
+            <div class="step-connector">
+                →
+            </div>
+
+
+            <!-- STEP 3 -->
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+                    🚀
+                </div>
+
+                <h3>
+                    Learn & Improve
+                </h3>
+
+                <p>
+                    Study, ask questions, track progress,
+                    and let AI continuously improve your plan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     AI ASSISTANT SECTION
+===================================================== -->
+
+<section
+    class="assistant-section"
+    id="about"
+>
+
+    <div class="container assistant-container">
+
+
+        <!-- LEFT -->
+
+        <div class="assistant-content">
+
+            <span>
+                YOUR PERSONAL AI TUTOR
+            </span>
+
+            <h2>
+                Never get stuck
+                <em>while learning.</em>
+            </h2>
+
+            <p>
+                Have a question? Ask your AI learning
+                assistant anytime. Get explanations,
+                examples, practice questions and
+                personalized guidance.
+            </p>
+
+
+            <ul>
+
+                <li>
+                    <span>✓</span>
+                    Explain difficult concepts simply
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Generate practice questions
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Get instant learning guidance
+                </li>
+
+                <li>
+                    <span>✓</span>
+                    Identify your weak topics
+                </li>
+
+            </ul>
+
+
+            <a
+                href="register.html"
+                class="primary-btn"
+            >
+                Start Learning With AI →
+            </a>
+
+        </div>
+
+
+        <!-- RIGHT CHAT -->
+
+        <div class="chat-window">
+
+            <div class="chat-header">
+
+                <div class="chat-ai-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <strong>
+                        LearnAI Assistant
+                    </strong>
+
+                    <small>
+                        ● Online
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-body">
+
+
+                <div class="chat-user">
+
+                    Can you explain
+                    binary search simply?
+
+                </div>
+
+
+                <div class="chat-ai">
+
+                    <span>
+                        🤖
+                    </span>
+
+                    <p>
+
+                        Of course! Think of binary search
+                        like looking for a word in a
+                        dictionary.
+
+                        <br><br>
+
+                        Instead of checking every page,
+                        you open the middle, decide whether
+                        to go left or right, and repeat.
+
+                    </p>
+
+                </div>
+
+
+                <div class="chat-suggestion">
+
+                    💡 Want me to give you
+                    a practice question?
+
+                </div>
+
+            </div>
+
+
+            <div class="chat-input">
+
+                <span>
+                    Ask your AI tutor anything...
+                </span>
+
+                <button>
+                    ↑
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta-section">
+
+    <div class="cta-box">
+
+
+        <div class="cta-icon">
+            🧠
+        </div>
+
+
+        <h2>
+            Stop wondering what to study next.
+        </h2>
+
+
+        <p>
+            Let AI create your personalized learning
+            journey and help you reach your goals faster.
+        </p>
+
+
+        <a
+            href="register.html"
+            class="primary-btn"
+        >
+
+            Create My Study Plan
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+        <small>
+            Already have an account?
+
+            <a href="index.html">
+                Login
+            </a>
+
+        </small>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <a
+                href="landing.html"
+                class="logo footer-logo"
+            >
+
+                <div class="logo-icon">
+                    🧠
+                </div>
+
+                <span>
+                    Learn<span class="logo-ai">AI</span>
+                </span>
+
+            </a>
+
+
+            <p>
+                Your AI-powered learning assistant
+                and personalized study planner.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Platform
+            </h4>
+
+            <a href="#features">
+                Features
+            </a>
+
+            <a href="#how-it-works">
+                How It Works
+            </a>
+
+            <a href="#about">
+                AI Assistant
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Account
+            </h4>
+
+            <a href="index.html">
+                Login
+            </a>
+
+            <a href="register.html">
+                Register
+            </a>
+
+            <a href="forgot-password.html">
+                Forgot Password
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Support
+            </h4>
+
+            <a href="#">
+                Help Center
+            </a>
+
+            <a href="#">
+                Privacy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 LearnAI. All rights reserved.
+        </span>
+
+        <span>
+            Built for smarter learning 🧠
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+function toggleMenu() {
+
+    const menu =
+        document.getElementById("mobileMenu");
+
+    menu.classList.toggle("active");
+
+}
+
+
+function closeMenu() {
+
+    const menu =
+        document.getElementById("mobileMenu");
+
+    menu.classList.remove("active");
+
+}
+
+
+
+/* ==========================================
+   SCROLL REVEAL
+========================================== */
+
+const animatedElements =
+    document.querySelectorAll(
+        ".feature-card, .step, .assistant-content, .chat-window"
+    );
+
+
+const observer =
+    new IntersectionObserver(
+        function(entries) {
+
+            entries.forEach(
+                function(entry) {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        entry.target.classList.add(
+                            "show"
+                        );
+
+                    }
+
+                }
+            );
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+animatedElements.forEach(
+    function(element) {
+
+        observer.observe(element);
+
+    }
+);
+
+
+
+/* ==========================================
+   HERO MOUSE MOVEMENT
+========================================== */
+
+const heroVisual =
+    document.querySelector(".hero-visual");
+
+
+if (heroVisual) {
+
+    document.addEventListener(
+        "mousemove",
+        function(event) {
+
+            if (
+                window.innerWidth < 900
+            ) {
+                return;
+            }
+
+
+            const x =
+                (window.innerWidth / 2 -
+                event.clientX) / 80;
+
+
+            const y =
+                (window.innerHeight / 2 -
+                event.clientY) / 80;
+
+
+            heroVisual.style.transform =
+                `translate(${x}px, ${y}px)`;
+
+        }
+    );
+
+}
+
+
+
+/* ==========================================
+   ANIMATED COUNTER EFFECT
+========================================== */
+
+const progressBar =
+    document.querySelector(
+        ".progress-bar span"
+    );
+
+
+if (progressBar) {
+
+    setTimeout(
+        function() {
+
+            progressBar.style.width =
+                "72%";
+
+        },
+        500
+    );
+
+}
+
+</script>
+
+
+</body>
+
+</html>
