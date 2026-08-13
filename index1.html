@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,7 @@
           <small>Student</small>
         </span>
 
-        <span>⌄</span>
+
       </summary>
 
       <div class="profile-menu">
@@ -105,8 +106,13 @@
           </label>
 
         </div>
+        <div class="quiz_container">
+          <button type="submit" class="btn">Start Quiz</button>
+        </div>
+        
+      </form>
 
-        <div class="question-box">
+       <div class="question-box">
           <div class="question-heading">
             <div class="question-icon">?</div>
 
@@ -118,13 +124,8 @@
 
           <label for="question">Your question</label>
 
-          <textarea
-            id="question"
-            name="question"
-            rows="5"
-            maxlength="300"
-            placeholder="For example: Can you explain Newton's second law?"
-          ></textarea>
+          <textarea id="question" name="question" rows="5" maxlength="300"
+            placeholder="For example: Can you explain Newton's second law?"></textarea>
 
           <p class="character-count">
             <span id="characterCount">0</span>/300 characters
@@ -136,8 +137,6 @@
 
           <p id="formMessage" class="form-message"></p>
         </div>
-
-      </form>
     </section>
   </main>
 

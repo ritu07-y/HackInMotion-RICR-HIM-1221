@@ -7,6 +7,7 @@ body {
   font-family: Arial, sans-serif;
   color: #25233a;
   background: #f6f6fb;
+  /* text-align: center; */
 }
 
 /* Header */
@@ -324,3 +325,34 @@ textarea:focus {
     width: 100%;
   }
 }
+
+/* .btn{
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #6c5ce7;
+  color: white;
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+}
+ */
+
+
+ .quiz_container {
+  text-align: center;
+  margin: 30px;
+}
+
+.btn {
+  /* margin-top: 15px; */
+  padding: 10px 25px;
+  background-color: #6c5ce7;
+  color: white;
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 20px;
+}
+
