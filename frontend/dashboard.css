@@ -344,7 +344,7 @@ textarea:focus {
 }
 
 .btn {
-  /* margin-top: 15px; */
+  margin-top: 15px auto;
   padding: 10px 25px;
   background-color: #6c5ce7;
   color: white;
