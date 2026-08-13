@@ -1,6 +1,7 @@
 package com.hackathon.studyai.service;
 
 import com.hackathon.studyai.entity.AuthProvider;
+import com.hackathon.studyai.entity.StudyCategory;
 import com.hackathon.studyai.entity.User;
 import com.hackathon.studyai.repository.UserRepository;
 import com.hackathon.studyai.security.JwtUtil;
@@ -75,5 +76,13 @@ public class AuthService {
                                 .providerId(googleId)
                                 .build()
                 ));
+    }
+
+    public User updateStudyCategory(User user, StudyCategory category) {
+        if (category == null) {
+            throw new RuntimeException("Study category is required");
+        }
+        user.setStudyCategory(category);
+        return userRepository.save(user);
     }
 }

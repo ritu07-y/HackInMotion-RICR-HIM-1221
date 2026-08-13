@@ -31,3 +31,21 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Secrets - never commit ###
+application-local.properties
+application-secret.properties
+.env
+*.env
+
+### OS ###
+.DS_Store
+Thumbs.db
+desktop.ini
+
+### Logs ###
+*.log
+logs/
+
+### Uploaded/generated files (if any) ###
+uploads/
