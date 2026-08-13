@@ -5,6 +5,7 @@ import com.hackathon.studyai.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.hackathon.studyai.dto.UpdateProfileRequest;
 
 import java.util.Map;
 
@@ -40,5 +41,18 @@ public class AuthController {
     public ResponseEntity<?> testProtected(org.springframework.security.core.Authentication authentication) {
         User user = (User) authentication.getPrincipal();
         return ResponseEntity.ok("Hello, " + user.getEmail());
+    }
+
+    @PutMapping("/profile/category")
+    public ResponseEntity<?> updateCategory(@RequestBody UpdateProfileRequest request,
+                                            org.springframework.security.core.Authentication authentication) {
+        try {
+            User user = (User) authentication.getPrincipal();
+            User updated = authService.updateStudyCategory(user, request.studyCategory());
+            updated.setPassword(null);
+            return ResponseEntity.ok(updated);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        }
     }
 }
