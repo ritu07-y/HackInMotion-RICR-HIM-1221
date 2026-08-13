@@ -15,3 +15,4 @@ An AI-powered learning assistant that helps students create personalized study p
 - JavaScript
 - Spring Boot
 - MySQL
+- Spring Ai
