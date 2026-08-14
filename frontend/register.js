@@ -1,245 +1,59 @@
-/* =====================================
-   SHOW / HIDE PASSWORD
-===================================== */
+function togglePassword(i,b){const input=document.getElementById(i);if(input.type==="password"){input.type="text";b.textContent="🙈"}else{input.type="password";b.textContent="👁"}}
 
-function togglePassword(inputId, button) {
+const password=document.getElementById("registerPassword"),passwordStrength=document.getElementById("passwordStrength");
 
-    const input =
-        document.getElementById(inputId);
+password.addEventListener("input",function(){const v=password.value;if(v.length===0){passwordStrength.classList.remove("show");return}passwordStrength.classList.add("show");checkRule("lengthCheck",v.length>=8);checkRule("uppercaseCheck",/[A-Z]/.test(v));checkRule("lowercaseCheck",/[a-z]/.test(v));checkRule("numberCheck",/[0-9]/.test(v));checkRule("specialCheck",/[^A-Za-z0-9]/.test(v))});
 
+function checkRule(i,v){const e=document.getElementById(i);if(v){e.classList.add("valid");e.textContent="✓ "+e.textContent.substring(2)}else{e.classList.remove("valid");e.textContent="✕ "+e.textContent.substring(2)}}
 
-    if (input.type === "password") {
+const API_BASE_URL = "http://localhost:8080";
 
-        input.type = "text";
+const registerForm=document.getElementById("registerForm");
 
-        button.textContent = "🙈";
+registerForm.addEventListener("submit",async function(e){
 
-    } else {
+    e.preventDefault();
 
-        input.type = "password";
+    const n=document.getElementById("registerName").value.trim(),
+          em=document.getElementById("registerEmail").value.trim(),
+          p=document.getElementById("registerPassword").value,
+          cp=document.getElementById("confirmPassword").value,
+          t=document.getElementById("terms").checked,
+          toast=document.getElementById("toast"),
+          s=p.length>=8&&/[A-Z]/.test(p)&&/[a-z]/.test(p)&&/[0-9]/.test(p)&&/[^A-Za-z0-9]/.test(p);
 
-        button.textContent = "👁";
+    if(!s){toast.textContent="Please create a strong password.";toast.classList.add("show");return}
+    if(p!==cp){toast.textContent="Passwords do not match.";toast.classList.add("show");return}
+    if(!t){toast.textContent="Please accept the Terms & Conditions.";toast.classList.add("show");return}
 
+    try {
+
+        const response = await fetch(API_BASE_URL + "/api/auth/register", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name: n, email: em, password: p })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            toast.textContent = data.error || "Registration failed. Please try again.";
+            toast.classList.add("show");
+            return;
+        }
+
+        toast.textContent = "Account created successfully!";
+        toast.classList.add("show");
+
+        setTimeout(function() {
+            window.location.href = "login.html";
+        }, 1200);
+
+    } catch (error) {
+        toast.textContent = "Could not connect to server. Please try again.";
+        toast.classList.add("show");
     }
-
-}
-
-
-/* =====================================
-   PASSWORD STRENGTH
-===================================== */
-
-const password =
-    document.getElementById("registerPassword");
-
-const passwordStrength =
-    document.getElementById("passwordStrength");
-
-
-password.addEventListener("input", function () {
-
-    const value = password.value;
-
-
-    if (value.length === 0) {
-
-        passwordStrength.classList.remove("show");
-
-        return;
-
-    }
-
-
-    passwordStrength.classList.add("show");
-
-
-    checkRule(
-        "lengthCheck",
-        value.length >= 8
-    );
-
-
-    checkRule(
-        "uppercaseCheck",
-        /[A-Z]/.test(value)
-    );
-
-
-    checkRule(
-        "lowercaseCheck",
-        /[a-z]/.test(value)
-    );
-
-
-    checkRule(
-        "numberCheck",
-        /[0-9]/.test(value)
-    );
-
-
-    checkRule(
-        "specialCheck",
-        /[^A-Za-z0-9]/.test(value)
-    );
 
 });
 
-
-function checkRule(id, valid) {
-
-    const element =
-        document.getElementById(id);
-
-
-    if (valid) {
-
-        element.classList.add("valid");
-
-        element.textContent =
-            "✓ " +
-            element.textContent.substring(2);
-
-    } else {
-
-        element.classList.remove("valid");
-
-        element.textContent =
-            "✕ " +
-            element.textContent.substring(2);
-
-    }
-
-}
-
-
-/* =====================================
-   REGISTER FORM
-===================================== */
-
-const registerForm =
-    document.getElementById("registerForm");
-
-
-registerForm.addEventListener(
-    "submit",
-    function (event) {
-
-        event.preventDefault();
-
-
-        const name =
-            document.getElementById(
-                "registerName"
-            ).value.trim();
-
-
-        const email =
-            document.getElementById(
-                "registerEmail"
-            ).value.trim();
-
-
-        const passwordValue =
-            document.getElementById(
-                "registerPassword"
-            ).value;
-
-
-        const confirmPassword =
-            document.getElementById(
-                "confirmPassword"
-            ).value;
-
-
-        const terms =
-            document.getElementById(
-                "terms"
-            ).checked;
-
-
-        const toast =
-            document.getElementById("toast");
-
-
-        const strongPassword =
-
-            passwordValue.length >= 8 &&
-
-            /[A-Z]/.test(passwordValue) &&
-
-            /[a-z]/.test(passwordValue) &&
-
-            /[0-9]/.test(passwordValue) &&
-
-            /[^A-Za-z0-9]/.test(passwordValue);
-
-
-        if (!strongPassword) {
-
-            toast.textContent =
-                "Please create a strong password.";
-
-            toast.classList.add("show");
-
-            return;
-
-        }
-
-
-        if (passwordValue !== confirmPassword) {
-
-            toast.textContent =
-                "Passwords do not match.";
-
-            toast.classList.add("show");
-
-            return;
-
-        }
-
-
-        if (!terms) {
-
-            toast.textContent =
-                "Please accept the Terms & Conditions.";
-
-            toast.classList.add("show");
-
-            return;
-
-        }
-
-
-        console.log("Name:", name);
-
-        console.log("Email:", email);
-
-
-        /*
-         * Later send this data to
-         * your Spring Boot backend.
-         */
-
-        toast.textContent =
-            "Account details are valid.";
-
-        toast.classList.add("show");
-
-    }
-);
-
-
-/* =====================================
-   GOOGLE REGISTER
-===================================== */
-
-function googleRegister() {
-
-    /*
-     * Spring Boot OAuth2 endpoint
-     */
-
-    window.location.href =
-        "http://localhost:8080/oauth2/authorization/google";
-
-}
+function googleRegister(){window.location.href="http://localhost:8080/oauth2/authorization/google"}

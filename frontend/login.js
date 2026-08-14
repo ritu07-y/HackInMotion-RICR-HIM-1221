@@ -37,9 +37,12 @@ const loginForm =
     document.getElementById("loginForm");
 
 
+const API_BASE_URL = "http://localhost:8080";
+
+
 loginForm.addEventListener(
     "submit",
-    function(event) {
+    async function(event) {
 
         event.preventDefault();
 
@@ -94,27 +97,66 @@ loginForm.addEventListener(
         }
 
 
-        /* Demo */
+        /* Call backend */
 
-        console.log("Email:", email);
+        try {
 
-        console.log(
-            "Remember me:",
-            rememberMe
-        );
+            const response = await fetch(
+                API_BASE_URL + "/api/auth/login",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                }
+            );
 
+            const data = await response.json();
 
-        toast.textContent =
-            "Login successful!";
+            if (!response.ok) {
 
-        toast.className =
-            "toast success";
+                toast.textContent =
+                    data.error || "Login failed. Please try again.";
 
+                toast.className =
+                    "toast error";
 
-        /*
-         * Later connect Firebase
-         * Authentication here.
-         */
+                return;
+
+            }
+
+            /* Success — store the JWT */
+
+            if (rememberMe) {
+                localStorage.setItem("authToken", data.token);
+            } else {
+                sessionStorage.setItem("authToken", data.token);
+            }
+
+            toast.textContent =
+                "Login successful!";
+
+            toast.className =
+                "toast success";
+
+            setTimeout(function() {
+                window.location.href = "dashboard.html";
+            }, 1000);
+
+        }
+        catch (error) {
+
+            toast.textContent =
+                "Could not connect to server. Please try again.";
+
+            toast.className =
+                "toast error";
+
+        }
 
     }
 );

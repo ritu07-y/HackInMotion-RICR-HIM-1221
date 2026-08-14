@@ -7,37 +7,35 @@
 
   <link rel="stylesheet" href="dashboard.css">
 
-  <title>1211 RICR Dashboard</title>
+  <title>1221 RICR Dashboard</title>
 </head>
 
 <body>
 
   <header>
-    <div class="logo">1211 <span>RICR</span></div>
+    <div class="logo">1221 <span>RICR</span></div>
 
     <details>
       <summary>
-        <span class="avatar">AR</span>
+        <span class="avatar" id="userAvatar">S</span>
 
         <span>
-          <strong>Alex Rivera</strong>
-          <small>Student</small>
-        </span>
-
-
+      <strong id="userFullName">Student</strong>
+      <small>Student</small>
+    </span>
       </summary>
 
       <div class="profile-menu">
-        <a href="#">Add Profile</a>
-        <a href="#">Settings</a>
-        <a href="#">Log Out</a>
+<!--        <a href="#">Add Profile</a>-->
+<!--        <a href="#">Settings</a>-->
+        <a href="login.html">Log Out</a>
       </div>
     </details>
   </header>
 
   <main>
     <section class="welcome">
-      <h1>Welcome back, Alex!</h1>
+      <h1>Welcome back, <span id="welcomeName">Student</span>!</h1>
     </section>
 
     <section class="learning-section">
@@ -135,7 +133,7 @@
             Submit question
           </button>
 
-          <p id="formMessage" class="form-message"></p>
+
         </div>
     </section>
   </main>

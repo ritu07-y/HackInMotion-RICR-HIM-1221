@@ -3,6 +3,7 @@ package com.hackathon.studyai.controller;
 import com.hackathon.studyai.entity.User;
 import com.hackathon.studyai.service.AuthService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.Authentication;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.hackathon.studyai.dto.UpdateProfileRequest;
@@ -51,6 +52,17 @@ public class AuthController {
             User updated = authService.updateStudyCategory(user, request.studyCategory());
             updated.setPassword(null);
             return ResponseEntity.ok(updated);
+        } catch (RuntimeException e) {
+            return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
+        }
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<?> getCurrentUser(Authentication authentication) {
+        try {
+            User user = (User) authentication.getPrincipal();
+            user.setPassword(null);
+            return ResponseEntity.ok(user);
         } catch (RuntimeException e) {
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         }
